@@ -141,14 +141,54 @@ melody-chorus-one = \relative c'' {
 melody = \relative c' {
 	\key a \major
 	\time 7/8
-  \tempo 4 = 84
+  \tempo 4 = 92
   \melody-verse-one
   \melody-bridge-one
   \melody-chorus-one
 }
 
-lower-verse-one = \relative c' {
+upper-verse-one = \relative c' {
+  \time 7/8
+  R2..
 
+  \time 9/8
+  r2. r4.
+  \time 7/8
+  R2..
+  \time 9/8
+  r2. r4.
+  \time 4/4
+  R1
+  \time 7/8
+  R2..
+  \time 9/8
+  r2. r4.
+  \time 7/8
+  R2..
+  R2..
+}
+
+upper-verse-one-b = \relative c'' {
+  \time 9/8
+  r4 e fis gis b8~
+  \time 7/8
+  b4 cis e4.
+  \time 9/8
+  r4 e, fis gis b8~
+  \time 4/4
+  b4 cis~ cis8 gis'4.
+  \time 7/8
+  r4 e d4.~
+  \time 9/8
+  d4 gis, fis e d8~
+  \time 7/8
+  d4 e fis a8~
+  \time 9/8
+  a4 e b e16 fis gis a b bis
+}
+
+lower-verse-one = \relative c' {
+  \time 7/8
   R2..
 
   \time 9/8
@@ -158,22 +198,75 @@ lower-verse-one = \relative c' {
   \time 9/8
   fis8 e' a b cis e b cis e
   \time 4/4
-  cis8 gis b fis a gis fis e
+  b8 a e d cis a' gis e
   \time 7/8
-  d8 b' cis e a, fis b,
+  d8 b' cis e b cis e
   \time 9/8
-  cis8 e b' cis d, b' fis a a,
+  cis b e, b' a d, a' gis cis,
   \time 7/8
-  b8 a' cis fis, a cis, d
+  b8 a' cis fis, a b gis
+  e8 fis a d e gis cis
+}
 
-  e gis a b cis d e
+lower-verse-one-b = \relative c' {
+  \time 9/8
+  a8 e' a b cis e b cis e
+  \time 7/8
+  b8 a e d cis e b
+  \time 9/8
+  fis8 e' a b cis e b cis e
+  \time 4/4
+  b8 a e d cis a' b, gis'
+  \time 7/8
+  d8 b' cis e b cis e
+  \time 9/8
+  cis b e, b' a d, a' gis cis,
+  \time 7/8
+  b8 a' cis d fis cis d
+  \time 9/8
+  e,8 fis a d e gis, b d, eis,
+}
+
+upper-bridge-one = \relative c''' {
+  \time 9/8
+  cis4 r fis8 gis, f' a, e'
+  r2 fis8 gis, f' a, e'
+  r2 b8 e, bis' e, cis'
+  \time 4/4
+  r2 r8 fis, e' cis
+  \time 5/4
+  d4 r d,8 b' e, cis' fis, d'
+  r2 e,8 cis' fis, d' gis, e'
+  \time 11/8
+  r2 fis,8 d' gis, e' a, fis' cis'
+  \time 9/8
+  b16 a gis fis e d cis b a gis fis e d cis b a gis fis
+}
+
+lower-bridge-one = \relative c {
+  \time 9/8
+  \clef bass
+  fis8 cis' gis' b~ b4~ b4.
+  eis,,8 cis' gis' b~ b4 b4.
+  e,,8 cis' gis' b~ b4 b4.
+  \time 4/4
+  dis,,8 a' cis fis a2
+  \time 5/4
+  b,,8 a' d fis~ fis2 e8 b
+  cis,8 a' e' gis~ gis4. fis8 e b
+  \time 11/8
+  d,8 a' cis fis~ fis8 cis e d b a b,
+  \time 9/8
+  e, 8 fis' a d~ d4~ d4.
 }
 
 upper = \relative c' {
   \clef treble
-  \tempo 4 = 84
-  % \time 3/4
+  \tempo 4 = 92
   \key a \major
+  \upper-verse-one
+  \upper-verse-one-b
+  \upper-bridge-one
   % \bar "|."
 }
 
@@ -182,6 +275,8 @@ lower = \relative c {
   \time 7/8
   \key a \major
   \lower-verse-one
+  \lower-verse-one-b
+  \lower-bridge-one
   % \bar "|."
 }
 
