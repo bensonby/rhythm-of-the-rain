@@ -202,9 +202,9 @@ lower-verse-one = \relative c' {
   \time 7/8
   d8 b' cis e b cis e
   \time 9/8
-  cis b e, b' a d, a' gis cis,
+  cis b e, b' a cis, a' gis a,
   \time 7/8
-  b8 a' cis fis, a b gis
+  b8 a' cis fis, a d gis,
   e8 fis a d e gis cis
 }
 
@@ -216,11 +216,11 @@ lower-verse-one-b = \relative c' {
   \time 9/8
   fis8 e' a b cis e b cis e
   \time 4/4
-  b8 a e d cis a' b, gis'
+  b8 a e d cis a' gis b,
   \time 7/8
   d8 b' cis e b cis e
   \time 9/8
-  cis b e, b' a d, a' gis cis,
+  cis b e, b' a cis, a' gis a,
   \time 7/8
   b8 a' cis d fis cis d
   \time 9/8
@@ -245,8 +245,8 @@ upper-bridge-one = \relative c''' {
 
 lower-bridge-one = \relative c {
   \time 9/8
-  \clef bass
   fis8 cis' gis' b~ b4~ b4.
+  \clef bass
   eis,,8 cis' gis' b~ b4 b4.
   e,,8 cis' gis' b~ b4 b4.
   \time 4/4
@@ -260,6 +260,75 @@ lower-bridge-one = \relative c {
   e, 8 fis' a d~ d4~ d4.
 }
 
+upper-chorus-one = \relative c' {
+  \time 4/4
+  e4 r r2
+  \time 9/8
+  r2 cis''8 e, e' e, cis'
+  \time 4/4
+  e,2 gis8 fis e fis
+  \time 9/8
+  e2 cis'8 e, e' e, cis'
+  \time 4/4
+  e,2 fis8 gis fis a
+  \time 7/8
+  r4 a'8 a, fis' a, a'
+  \time 4/4
+  a,2 cis8 d cis e~
+  \time 7/8
+  e4 a8 a, fis' a, a'
+  \time 4/4
+  gis2 r2
+  \time 9/8
+  r2 cis,8 e, e' e, cis'
+  \time 4/4
+  e,2 gis8 fis e fis
+  \time 9/8
+  e2 cis'8 e, e' e, cis'
+  \time 4/4
+  e,2 fis8 gis fis a
+  \time 7/8
+  r4 a'8 a, fis' a, a'
+  \time 4/4
+  a,2 cis8 d cis e~
+  \time 9/8
+}
+
+lower-chorus-one = \relative c {
+  \time 4/4
+  <e fis a d>1
+  \time 9/8
+  \clef treble
+  a8 e' b' cis~ cis4~ cis4.
+  \time 4/4
+  cis,8 e b' cis~ cis2
+  \time 9/8
+  fis,,8  e' a b~ b4~ b4.
+  \time 4/4
+  cis,8 e gis b~ b2
+  \time 7/8
+  d,8 a' cis fis~ fis4.
+  \time 4/4
+  cis,8 e a b~ b2
+  \time 7/8
+  b,8 fis' a d~ d4.
+  \time 4/4
+  e8 d a fis e b a e
+  \time 9/8
+  a8 e' b' cis~ cis4~ cis4.
+  \time 4/4
+  cis,8 e b' cis~ cis2
+  \time 9/8
+  fis,,8  e' a b~ b4~ b4.
+  \time 4/4
+  cis,8 e gis b~ b2
+  \time 7/8
+  d,8 a' cis fis~ fis4.
+  \time 4/4
+  cis,8 e a cis~ cis2
+  \time 9/8
+}
+
 upper = \relative c' {
   \clef treble
   \tempo 4 = 92
@@ -267,6 +336,7 @@ upper = \relative c' {
   \upper-verse-one
   \upper-verse-one-b
   \upper-bridge-one
+  \upper-chorus-one
   % \bar "|."
 }
 
@@ -277,6 +347,7 @@ lower = \relative c {
   \lower-verse-one
   \lower-verse-one-b
   \lower-bridge-one
+  \lower-chorus-one
   % \bar "|."
 }
 
