@@ -49,10 +49,27 @@ rhMark = \markup {
   arranger = "Arranged by Benson"
 }
 
+meter-nine-four-plus-five = \overrideTimeSignatureSettings
+        9/8        % timeSignatureFraction
+        1/8        % baseMomentFraction
+        #'(4 5)    % beatStructure
+        #'()       % beamExceptions
+meter-seven-four-plus-three = \overrideTimeSignatureSettings
+        7/8        % timeSignatureFraction
+        1/8        % baseMomentFraction
+        #'(4 3)    % beatStructure
+        #'()       % beamExceptions
+meter-eleven-four-plus-three = \overrideTimeSignatureSettings
+        11/8        % timeSignatureFraction
+        1/8        % baseMomentFraction
+        #'(4 4 3)    % beatStructure
+        #'()       % beamExceptions
+
 melody-verse-one = \relative c' {
 	r2 r4
 	a8\(
 	\time 9/8
+  % \time #'(4 2 3) 9/8
 	b8 b b a b4 e cis8\)
 	\time 7/8
 	r2 r4 a8\(
@@ -99,7 +116,7 @@ melody-bridge-one = \relative c' {
 	\time 11/8
 	r4 a8 fis a4 cis cis4.(
 	\time 9/8
-	b4)\)  r4 r4 r4 r8
+	b4)\)  r4 r4 r4.
 }
 
 melody-chorus-one = \relative c'' {
@@ -139,6 +156,9 @@ melody-chorus-one = \relative c'' {
 }
 
 melody = \relative c' {
+  \meter-nine-four-plus-five
+  \meter-seven-four-plus-three
+  \meter-eleven-four-plus-three
 	\key a \major
 	\time 7/8
   \tempo 4 = 92
@@ -330,6 +350,9 @@ lower-chorus-one = \relative c {
 }
 
 upper = \relative c' {
+  \meter-nine-four-plus-five
+  \meter-seven-four-plus-three
+  \meter-eleven-four-plus-three
   \clef treble
   \tempo 4 = 92
   \key a \major
@@ -341,6 +364,9 @@ upper = \relative c' {
 }
 
 lower = \relative c {
+  \meter-nine-four-plus-five
+  \meter-seven-four-plus-three
+  \meter-eleven-four-plus-three
   \clef treble
   \time 7/8
   \key a \major
