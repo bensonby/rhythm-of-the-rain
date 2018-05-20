@@ -54,6 +54,11 @@ meter-nine-four-plus-five = \overrideTimeSignatureSettings
         1/8        % baseMomentFraction
         #'(4 5)    % beatStructure
         #'()       % beamExceptions
+meter-nine-three-plus-six = \overrideTimeSignatureSettings
+        9/8        % timeSignatureFraction
+        1/8        % baseMomentFraction
+        #'(3 6)    % beatStructure
+        #'()       % beamExceptions
 meter-seven-four-plus-three = \overrideTimeSignatureSettings
         7/8        % timeSignatureFraction
         1/8        % baseMomentFraction
@@ -66,6 +71,7 @@ meter-eleven-four-plus-three = \overrideTimeSignatureSettings
         #'()       % beamExceptions
 
 melody-verse-one = \relative c' {
+  \time 7/8
 	r2 r4
 	a8\(
 	\time 9/8
@@ -152,7 +158,12 @@ melody-chorus-one = \relative c'' {
 	r4 r8 a\( a b a cis~
 	\time 9/8
 	cis2 fis,4 cis' b8\)
-	r4 a8 gis4 a a
+	r4 gis8 gis4 a a
+}
+
+melody-episode = \relative c' {
+  \time 9/8
+  r2. r4.
 }
 
 melody = \relative c' {
@@ -163,6 +174,9 @@ melody = \relative c' {
 	\time 7/8
   \tempo 4 = 92
   \melody-verse-one
+  \melody-bridge-one
+  \melody-chorus-one
+  \melody-episode
   \melody-bridge-one
   \melody-chorus-one
 }
@@ -196,15 +210,15 @@ upper-verse-one-b = \relative c'' {
   \time 9/8
   r4 e, fis gis b8~
   \time 4/4
-  b4 cis~ cis8 gis'4.
+  b4 cis gis'2
   \time 7/8
   r4 e d4.~
   \time 9/8
   d4 gis, fis e d8~
   \time 7/8
-  d4 e fis a8~
+  d4 gis a b8~
   \time 9/8
-  a4 e b e16 fis gis a b bis
+  b4 cis d e,16 fis gis a b bis
 }
 
 lower-verse-one = \relative c' {
@@ -286,31 +300,37 @@ upper-chorus-one = \relative c' {
   \time 9/8
   r2 cis''8 e, e' e, cis'
   \time 4/4
-  e,2 gis8 fis e fis
+  e,2 a4\( gis
   \time 9/8
-  e2 cis'8 e, e' e, cis'
+  e2\) cis'8 e, e' e, cis'
   \time 4/4
-  e,2 fis8 gis fis a
+  e,2 fis4\( gis
   \time 7/8
-  r4 a'8 a, fis' a, a'
+  a4\) a'8 a, fis' a, a'
   \time 4/4
-  a,2 cis8 d cis e~
+  a,2 d4\( cis
   \time 7/8
-  e4 a8 a, fis' a, a'
+  b4\) a'8 a, fis' a, a'
   \time 4/4
   gis2 r2
   \time 9/8
   r2 cis,8 e, e' e, cis'
   \time 4/4
-  e,2 gis8 fis e fis
+  e,2 a4\( gis
   \time 9/8
-  e2 cis'8 e, e' e, cis'
+  e2\) cis'8 e, e' e, cis'
   \time 4/4
-  e,2 fis8 gis fis a
+  e,2 fis4\( gis
   \time 7/8
-  r4 a'8 a, fis' a, a'
+  a4\) a'8 a, fis' a, a'
   \time 4/4
-  a,2 cis8 d cis e~
+  a,2 d4\( cis
+  \time 9/8
+  b2\) cis8 e, e' e, cis'
+  \meter-nine-three-plus-six
+  \time 9/8
+  <e, a d>4. d8 e fis gis a b
+  \meter-nine-four-plus-five
   \time 9/8
 }
 
@@ -347,6 +367,19 @@ lower-chorus-one = \relative c {
   \time 4/4
   cis,8 e a cis~ cis2
   \time 9/8
+  b,8 fis' a d~ d4~ d4.
+  \clef bass
+  <e,, fis'>4.~ q2.
+}
+
+upper-episode = \relative c' {
+  \time 9/8
+  r2. r4.
+}
+
+lower-episode = \relative c' {
+  \time 9/8
+  r2. r4.
 }
 
 upper = \relative c' {
@@ -360,6 +393,7 @@ upper = \relative c' {
   \upper-verse-one-b
   \upper-bridge-one
   \upper-chorus-one
+  \upper-episode
   % \bar "|."
 }
 
@@ -374,6 +408,7 @@ lower = \relative c {
   \lower-verse-one-b
   \lower-bridge-one
   \lower-chorus-one
+  \lower-episode
   % \bar "|."
 }
 
@@ -409,7 +444,7 @@ lyricsmain = \lyricmode {
   終 於 聽 見 下 雨 的 聲 音
   於 是 我 的 世 界 被 吵 醒
   發 現 你 始 終 很 靠 近
-  默 默 的 陪 在 我身邊 態 度 堅 定
+  默 默 的 陪 在 我 身 邊 態 度 堅 定
 }
 
 \paper {
