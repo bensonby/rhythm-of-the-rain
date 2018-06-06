@@ -163,7 +163,13 @@ melody-chorus-one = \relative c'' {
 
 melody-episode = \relative c' {
   \time 9/8
-  r2. r4.
+  \repeat unfold 3 {
+    r2. r4.
+  }
+  \time 7/8
+  \repeat unfold 2 {
+    r2 r4.
+  }
 }
 
 melody = \relative c' {
@@ -372,14 +378,34 @@ lower-chorus-one = \relative c {
   <e,, fis'>4.~ q2.
 }
 
-upper-episode = \relative c' {
+upper-episode = \relative c''' {
   \time 9/8
-  r2. r4.
+  cis4. e2 cis4
+  \meter-nine-three-plus-six
+  fis4 e8~ e fis e d cis c
+  \meter-nine-four-plus-five
+  b2 d,8 f a f b
+  \time 7/8
+  c2 dis8
+  \ottava #1
+  b' a
+  \ottava #0
+  fis8 f e dis d cis b
 }
 
 lower-episode = \relative c' {
+  \meter-nine-three-plus-six
   \time 9/8
-  r2. r4.
+  \clef treble
+  a8 e' fis gis e b' e, cis' e,
+  e'8 g, fis e2.
+  \meter-nine-four-plus-five
+  \time 9/8
+  d8 f a b~ d4 d4.
+  \time 7/8
+  dis,8 a' b c fis4.
+  eis,8 b' dis eis gis4.
+
 }
 
 upper = \relative c' {
