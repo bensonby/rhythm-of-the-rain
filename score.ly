@@ -304,35 +304,35 @@ upper-chorus-one = \relative c' {
   \time 4/4
   e4 r r2
   \time 9/8
-  r2 cis''8 e, e' e, cis'
+  r2 fis'8 e gis e b'
   \time 4/4
   e,2 a4\( gis
   \time 9/8
-  e2\) cis'8 e, e' e, cis'
+  e2\) gis8 e a e cis'
   \time 4/4
-  e,2 fis4\( gis
+  e2 fis4\( gis
   \time 7/8
-  a4\) a'8 a, fis' a, a'
+  a4\) e8 a, d a cis~
   \time 4/4
-  a,2 d4\( cis
+  cis8 e, b' e, a b, fis' b,
   \time 7/8
-  b4\) a'8 a, fis' a, a'
+  e4 d'8 e, cis' a a'
   \time 4/4
   gis2 r2
   \time 9/8
-  r2 cis,8 e, e' e, cis'
+  r2 fis,8 e gis e b'
   \time 4/4
   e,2 a4\( gis
   \time 9/8
-  e2\) cis'8 e, e' e, cis'
+  e2\) gis8 e a e cis'
   \time 4/4
-  e,2 fis4\( gis
+  e2 fis4\( gis
   \time 7/8
-  a4\) a'8 a, fis' a, a'
+  a4\) e8 a, d a cis~
   \time 4/4
-  a,2 d4\( cis
+  cis8 e, b' e, a b, fis' b,
   \time 9/8
-  b2\) cis8 e, e' e, cis'
+  e2 cis'8 e, e' e, cis'
   \meter-nine-three-plus-six
   \time 9/8
   <e, a d>4. d8 e fis gis a b
@@ -401,7 +401,7 @@ lower-episode = \relative c' {
   e'8 g, fis e2.
   \meter-nine-four-plus-five
   \time 9/8
-  d8 f a b~ d4 d4.
+  d8 f a b~ b4~ b4.
   \time 7/8
   dis,8 a' b c fis4.
   eis,8 b' dis eis gis4.
