@@ -109,6 +109,22 @@ melody-verse-one = \relative c' {
 	e8 cis b a e'4 gis, a8\)
 }
 
+melody-bridge-two = \relative c' {
+	\time 9/8
+	r4 r8 cis\( d4 cis gis'8\)
+	r4 r8 cis,\( d4 cis gis'8\)
+	r4 r8 fis\( gis4 a cis8\)
+	\time 4/4
+	r2 r4 a8\( gis
+	\time 5/4
+	a4 d,8 cis d4 a' a
+	r4 e8 cis e4 a a
+  \time 11/8
+	r4 a8 fis a4 cis cis4.(
+	\time 9/8
+	b4)\)  r4 r4 r4.
+}
+
 melody-bridge-one = \relative c' {
 	\time 9/8
 	r4 r8 cis\( d4 cis gis'8\)
@@ -183,7 +199,7 @@ melody = \relative c' {
   \melody-bridge-one
   \melody-chorus-one
   \melody-episode
-  \melody-bridge-one
+  \melody-bridge-two
   \melody-chorus-one
 }
 
@@ -408,6 +424,45 @@ lower-episode = \relative c' {
 
 }
 
+upper-bridge-two = \relative c'' {
+  \time 9/8
+  a8 <e b' e>4.~ q4~ q4.
+  a8 <eis b' e>4.~ q4~ q4.
+  a8 <fis gis e'>4.~ q4~ q4.
+  \time 4/4
+  a8 <b fis' a>4.~ q2
+  \time 5/4
+  r2 d8 b' e, cis' f, d'
+  r2 e,8 cis' fis, d' gis, e'
+  \time 11/8
+  r2 fis,8 dis' g, e' a, \ottava #1 fis' cis'
+  \time 9/8
+  b16 a g f fes ees des c
+  bes' aes g f fes \ottava #0 ees des c bes aes
+  g4 r4 r2
+}
+
+lower-bridge-two = \relative c {
+  \clef bass
+  \time 9/8
+  fis8~ <fis gis'>4.~ q4~ q4.
+  eis8~ <eis cis'>4.~ q4~ q4.
+  e8~ <e cis'>4.~ q4~ q4.
+  \time 4/4
+  dis8~ <dis cis'>4.~ q2
+  \time 5/4
+  d8 b' f' a~ a2.
+  cis,,8 b' e gis~ gis2.
+  \time 11/8
+  c,,8 a' dis fis~ fis2~ fis4.
+  \time 9/8
+  b,,8
+  \clef treble
+  c' ees aes~ aes4~ aes4.
+  <d, a' c>2
+  \clef bass <gis, d' e>
+}
+
 upper = \relative c' {
   \meter-nine-four-plus-five
   \meter-seven-four-plus-three
@@ -420,6 +475,7 @@ upper = \relative c' {
   \upper-bridge-one
   \upper-chorus-one
   \upper-episode
+  \upper-bridge-two
   % \bar "|."
 }
 
@@ -435,6 +491,7 @@ lower = \relative c {
   \lower-bridge-one
   \lower-chorus-one
   \lower-episode
+  \lower-bridge-two
   % \bar "|."
 }
 
@@ -481,8 +538,8 @@ lyricsmain = \lyricmode {
     \new Staff = "melodystaff" <<
       \set Staff.midiInstrument = #"electric guitar (clean)"
       \set Staff.instrumentName = #"Vocal"
-      \set Staff.midiMinimumVolume = #0.7
-      \set Staff.midiMaximumVolume = #0.8
+      \set Staff.midiMinimumVolume = #0.9
+      \set Staff.midiMaximumVolume = #1
       \new Voice = "melody" {
         \melody
       }
@@ -492,15 +549,15 @@ lyricsmain = \lyricmode {
       \set PianoStaff.instrumentName = #"Piano"
       \new Staff = "right" {
         \set Staff.midiInstrument = #"acoustic grand"
-        \set Staff.midiMinimumVolume = #0.9
-        \set Staff.midiMaximumVolume = #1
+        \set Staff.midiMinimumVolume = #0.6
+        \set Staff.midiMaximumVolume = #0.7
         \upper
       }
       \new Dynamics = "Dynamics_pf" \dynamics
       \new Staff = "left" {
         \set Staff.midiInstrument = #"acoustic grand"
-        \set Staff.midiMinimumVolume = #0.9
-        \set Staff.midiMaximumVolume = #1
+        \set Staff.midiMinimumVolume = #0.6
+        \set Staff.midiMaximumVolume = #0.7
         \lower
       }
     >>
