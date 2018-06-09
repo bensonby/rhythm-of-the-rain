@@ -245,43 +245,43 @@ melody = \relative c' {
 
 upper-intro = \relative c''' {
   \time 9/8
-  <a cis,>2 gis4~ gis g8~ 
+  <a cis,>2\( gis4~ gis g8~ 
   \time 4/4
-  g1
+  g1\)
   \time 7/8
-  fis2~ fis4.
+  fis2~\( fis4.
   f2~ f4.
   \time 9/8
-  dis2~ dis4. g8 gis
+  dis2~ dis4.\) g8\( gis
 
   <a cis,>2 gis4~ gis g8~ 
   \time 4/4
-  g1
+  g1\)
   \time 7/8
-  fis2~ fis4.
+  fis2~\( fis4.
   f2 b,8 cis d~
   \time 4/4
-  <e d gis,>1
+  <e d gis,>1\)
 }
 
 lower-intro = \relative c' {
   \clef treble
   \time 9/8
-  a8 e' fis gis b e, cis' e, e'
+  a8\( e' fis gis b e, cis' e, e'\)
   \time 4/4
-  cis8 b a g e g a b
+  cis8\( b a g e g a b\)
   \time 7/8
-  cis8 b a g e d b
-  a8 b f' a f a b
+  cis8\( b a g e d b\)
+  a8\( b f' a f a b\)
   \time 9/8
-  a,8 dis fis a b dis fis4.
+  a,8\( dis fis a b dis fis4.\)
 
-  a,,8 e' fis gis b e, cis' e, e'
+  a,,8\( e' fis gis b e, cis' e, e'\)
   \time 4/4
-  cis8 b a g e g a b
+  cis8\( b a g e g a b\)
   \time 7/8
-  cis8 b a g e d b
-  a8 b f' a~ a4.
+  cis8\( b a g e d b\)
+  a8\( b f' a~ a4.\)
   \time 4/4
   e1
 }
@@ -306,93 +306,94 @@ upper-verse-one = \relative c' {
 
 upper-verse-one-b = \relative c'' {
   \time 9/8
-  r4 e fis gis b8~
+  r4 e\( fis gis b8~
   \time 7/8
-  b4 cis e4.
+  b4 cis e4.\)
   \time 9/8
-  r4 e, fis gis b8~
+  r4 e,\( fis gis b8~
   \time 4/4
-  b4 cis gis'2
+  b4 cis gis'2\)
   \time 7/8
-  r4 e d4.~
+  r4 e\( d4.~
   \time 9/8
-  d4 gis, fis e d8~
+  d4\) gis,\( fis e d8~
   \time 7/8
-  d4 gis a b8~
+  d4\) gis\( a b8~
   \time 9/8
-  b4 cis d e,16 fis gis a b bis
+  b4 cis d\) e,16\( fis gis a b bis\)
 }
 
 lower-verse-one = \relative c' {
   \time 9/8
-  a8 e' a b cis e b cis e
+  a8\( e' a b cis e b cis e\)
   \time 7/8
-  b8 a e d cis e b
+  b8\( a e d cis e b\)
   \time 9/8
-  fis8 e' a b cis e b cis e
+  fis8\( e' a b cis e b cis e\)
   \time 4/4
-  b8 a e d cis a' gis e
+  b8\( a e d cis a' gis e\)
   \time 7/8
-  d8 b' cis e b cis e
+  d8\( b' cis e b cis e\)
   \time 9/8
-  cis b e, b' a cis, a' gis a,
+  cis\( b e, b' a cis, a' gis a,\)
   \time 7/8
-  b8 a' cis fis, a d gis,
-  e8 fis a d e gis cis
+  b8\( a' cis fis, a d gis,\)
+  e8\( fis a d e gis cis\)
 }
 
 lower-verse-one-b = \relative c' {
   \time 9/8
-  a8 e' a b cis e b cis e
+  a8\( e' a b cis e b cis e\)
   \time 7/8
-  b8 a e d cis e b
+  b8\( a e d cis e b\)
   \time 9/8
-  fis8 e' a b cis e b cis e
+  fis8\( e' a b cis e b cis e\)
   \time 4/4
-  b8 a e d cis a' gis b,
+  b8\( a e d cis a' gis b,\)
   \time 7/8
-  d8 b' cis e b cis e
+  d8\( b' cis e b cis e\)
   \time 9/8
-  cis b e, b' a cis, a' gis a,
+  cis8\( b e, b' a cis, a' gis a,\)
   \time 7/8
-  b8 a' cis d fis cis d
+  b8\( a' cis d fis cis d\)
   \time 9/8
-  e,8 fis a d e gis, b d, eis,
+  e,8\( fis a d e gis, b d, \clef bass eis,\)
 }
 
 upper-bridge-one = \relative c''' {
   \time 9/8
-  cis4 r fis8 gis, f' a, e'
-  r2 fis8 gis, f' a, e'
-  r2 b8 e, bis' e, cis'
+  cis4 r fis8\( gis, f' a, e'\)
+  r2 fis8\( gis, f' a, e'\)
+  r2 b8\( e, bis' e, cis'\)
   \time 4/4
-  r2 r8 fis, e' cis
+  r2 r8 fis,\( e' cis
   \time 5/4
-  d4 r d,8 b' e, cis' fis, d'
-  r2 e,8 cis' fis, d' gis, e'
+  d4\) r d,8\( b' e, cis' fis, d'\)
+  r2 e,8\( cis' fis, d' gis, e'\)
   \time 11/8
-  r2 fis,8 d' gis, e' a, \ottava #1 fis' cis'
+  r2 fis,8\( d' gis, e' a, \ottava #1 fis' cis'\)
   \time 9/8
-  b16 a gis fis \ottava #0 e d cis b a gis fis e d cis b a gis fis
+  b16\( a gis fis \ottava #0 e d cis b a gis fis e d cis b a gis fis
   \time 4/4
-  e4 r r2
+  e4\) r r2
 }
 
 lower-bridge-one = \relative c {
   \time 9/8
-  fis8 cis' gis' b~ b4~ b4.
   \clef bass
-  eis,,8 \clef treble cis' gis' b~ b4 b4.
-  \clef bass e,,8 \clef treble cis' gis' b~ b4 b4.
+  fis8\( \clef treble cis' gis' b~\) b4~ b4.
+  \clef bass
+  eis,,8\( \clef treble cis' gis' b~\) b4 b4.
+  \clef bass e,,8\( \clef treble cis' gis' b~\) b4 b4.
   \time 4/4
-  \clef bass dis,,8 a' cis fis a2
+  \clef bass dis,,8\( a' cis fis a2\)
   \time 5/4
-  b,,8 a' d fis~ fis2 e8 b
-  cis,8 a' e' gis~ gis4. fis8 e b
+  b,,8\( a' d fis~\) fis2 e8\( b\)
+  cis,8\( a' e' gis~\) gis4. fis8\( e b\)
   \time 11/8
-  d,8 a' cis fis~ fis8 cis e d b a b,
+  d,8\( a' cis fis~ fis8 cis e d b a b,\)
   \time 9/8
-  e, 8 fis' a d~ d4~ d4.
+  e, 8\( fis' a d~\) d4~ d4.
   \time 4/4
   <e, fis a d>1
 }
@@ -400,38 +401,38 @@ lower-bridge-one = \relative c {
 upper-chorus-one = \relative c' {
   \meter-nine-four-plus-five
   \time 9/8
-  r2 fis'8 e gis e b'
+  r2 fis'8\( e gis e b'
   \time 4/4
-  e,2 a4\( gis
+  e,2\) a4\( gis
   \time 9/8
-  e2\) gis8 e a e cis'
+  e2\) gis8\( e a e cis'
   \time 4/4
-  e2 fis4\( gis
+  e2\) fis4\( gis
   \time 7/8
-  a4\) e8 a, d a cis~
+  a4\) e8\( a, d a cis~
   \time 4/4
   cis8 e, b' e, a b, fis' b,
   \time 7/8
-  e4 d'8 e, cis' a \ottava #1 a'
+  e4\) d'8\( e, cis' a \ottava #1 a'
   \time 4/4
-  gis2 \ottava #0 r2
+  gis2\) \ottava #0 r2
   \time 9/8
-  r2 fis,8 e gis e b'
+  r2 fis,8\( e gis e b'
   \time 4/4
-  e,2 a4\( gis
+  e,2\) a4\( gis
   \time 9/8
-  e2\) gis8 e a e cis'
+  e2\) gis8\( e a e cis'
   \time 4/4
-  e2 fis4\( gis
+  e2\) fis4\( gis
   \time 7/8
-  a4\) e8 a, d a cis~
+  a4\) e8\( a, d a cis~
   \time 4/4
   cis8 e, b' e, a b, fis' b,
   \time 9/8
-  e2 cis'8 e, e' e, cis'
+  e2\) cis'8\( e, e' e, cis'
   \meter-nine-three-plus-six
   \time 9/8
-  <e, a d>4. d8 e fis gis a b
+  <e, a d>4.\) d8\( e fis gis a b\)
   \meter-nine-four-plus-five
   \time 9/8
 }
@@ -439,105 +440,105 @@ upper-chorus-one = \relative c' {
 lower-chorus-one = \relative c' {
   \time 9/8
   \clef treble
-  a8 e' b' cis~ cis4~ cis4.
+  a8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
-  cis,8 e b' cis~ cis2
+  cis,8\( e b' cis~\) cis2
   \time 9/8
-  fis,,8  e' a b~ b4~ b4.
+  fis,,8\(  e' a b~\) b4~ b4.
   \time 4/4
-  cis,8 e gis b~ b2
+  cis,8\( e gis b~\) b2
   \time 7/8
-  d,8 a' cis fis~ fis4.
+  d,8\( a' cis fis~\) fis4.
   \time 4/4
-  cis,8 e a b~ b2
+  cis,8\( e a b~\) b2
   \time 7/8
-  b,8 fis' a d~ d4.
+  b,8\( fis' a d~\) d4.
   \time 4/4
-  e8 d a fis e b a e
+  e8\( d a fis e b a e\)
   \time 9/8
-  a8 e' b' cis~ cis4~ cis4.
+  a8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
-  cis,8 e b' cis~ cis2
+  cis,8\( e b' cis~\) cis2
   \time 9/8
-  fis,,8  e' a b~ b4~ b4.
+  fis,,8\( e' a b~\) b4~ b4.
   \time 4/4
-  cis,8 e gis b~ b2
+  cis,8\( e gis b~\) b2
   \time 7/8
-  d,8 a' cis fis~ fis4.
+  d,8\( a' cis fis~\) fis4.
   \time 4/4
-  cis,8 e a cis~ cis2
+  cis,8\( e a cis~\) cis2
   \time 9/8
-  b,8 fis' a d~ d4~ d4.
+  b,8\( fis' a d~ d4~\) d4.
   \clef bass
   <e,, fis'>4.~ q2.
 }
 
 upper-episode = \relative c''' {
   \time 9/8
-  cis4. e2 cis4
+  cis4.\( e2 cis4
   \meter-nine-three-plus-six
-  fis4 e8~ e fis e d cis c
+  fis4 e8~ e\) fis\( e d cis c
   \meter-nine-four-plus-five
-  b2 d,8 f a f b
+  b2\) d,8\( f a f b
   \time 7/8
-  c2 dis8
+  c2\) dis8\(
   \ottava #1
   b' a
-  fis8 f \ottava #0 e dis d cis b
+  fis8 f \ottava #0 e dis d cis b\)
   \time 5/4
-  ais4. eis2 eis'8[ cis eis,]
+  ais4.\( eis2 eis'8[ cis eis,]
   \time 9/8
-  e?4. b'4 ais gis
+  e?4.\) b'4\( ais gis
   \time 5/4
-  <d fis>4 d8 fis d b' fis cis' b gis'
+  <d fis>4\) d8\( fis d b' fis cis' b gis'\)
   \time 9/8
-  <fis, c>4. dis8 c' fis, dis' a fis'
+  <fis, c>4. dis8\( c' fis, dis' a fis'
   \time 4/4
-  <eis gis,>2 fis4 gis
+  <eis gis,>2\)\( fis4 gis\)
 }
 
 lower-episode = \relative c' {
   \meter-nine-three-plus-six
   \time 9/8
   \clef treble
-  a8 e' fis gis e b' e, cis' e,
-  e'8 g, fis e2.
+  a8\( e' fis gis e b' e, cis' e,
+  e'8 g, fis e2.\)
   \meter-nine-four-plus-five
   \time 9/8
-  d8 f a b~ b4~ b4.
+  d8\( f a b~\) b4~ b4.
   \time 7/8
-  dis,8 a' b c fis4.
-  eis,8 b' dis eis gis4.
+  dis,8\( a' b c fis4.\)
+  eis,8\( b' dis eis gis4.\)
   \time 5/4
-  fis,,8[ cis' eis] fis[ eis ais eis] bis' eis,4
+  fis,,8[\( cis' eis] fis[ eis ais eis] bis' eis,4\)
   \meter-nine-three-plus-six
   \time 9/8
-  fis,8 e'? gis cis e, b' e, ais e
+  fis,8\( e'? gis cis e, b' e, ais e\)
   \meter-five-two-plus-three
   \time 5/4
-  fis,8 b a' b~ b2.
+  fis,8\( b a' b~\) b2.
   \time 9/8
-  \clef bass d,,8 a' fis'~ fis2.
+  \clef bass d,,8\( a' fis'~\) fis2.
   \time 4/4
-  cis,8 b' eis gisis~ gisis2
+  cis,8\( b' eis gisis~\) gisis2
 
 }
 
 upper-bridge-two = \relative c'' {
   \time 9/8
-  a8 <e b' e>4.~ q4~ q4.
-  a8 <eis b' e>4.~ q4~ q4.
-  a8 <fis gis e'>4.~ q4~ q4.
+  a8\( <e b' e>4.~\) q4~ q4.
+  a8\( <eis b' e>4.~\) q4~ q4.
+  a8\( <fis gis e'>4.~\) q4~ q4.
   \time 4/4
-  a8 <b fis' a>4.~ q2
+  a8\( <b fis' a>4.~\) q2
   \time 5/4
-  r2 d8 b' e, cis' f, d'
-  r2 e,8 cis' fis, d' gis, e'
+  r2 d8\( b' e, cis' f, d'\)
+  r2 e,8\( cis' fis, d' gis, e'\)
   \time 11/8
-  r2 fis,8 dis' gis, e' a, fis' \ottava #1 e'
+  r2 fis,8\( dis' gis, e' a, fis' \ottava #1 e'\)
   \time 4/4
-  ees16 d c bes aes g c bes aes g f ees \ottava #0 d c bes aes
-  g4 r4 r2
+  ees16\( d c bes aes g c bes aes g f ees \ottava #0 d c bes aes
+  g4\) r4 r2
 }
 
 lower-bridge-two = \relative c {
@@ -549,14 +550,14 @@ lower-bridge-two = \relative c {
   \time 4/4
   dis8~ <dis cis'>4.~ q2
   \time 5/4
-  d8 b' f' a~ a2.
-  cis,,8 b' e gis~ gis2.
+  d8\( b' f' a~\) a2.
+  cis,,8\( b' e gis~\) gis2.
   \time 11/8
-  c,,8 a' dis fis~ fis2~ fis4.
+  c,,8\( a' dis fis~\) fis2~ fis4.
   \time 4/4
-  b,,8
+  b,,8\(
   \clef treble
-  c' ees aes~ aes2
+  c' ees aes~\) aes2
   <d, a' c>2\arpeggio
   \clef bass <gis, d' e>
 }
