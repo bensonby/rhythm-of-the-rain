@@ -69,6 +69,16 @@ meter-eleven-four-plus-three = \overrideTimeSignatureSettings
         1/8        % baseMomentFraction
         #'(4 4 3)    % beatStructure
         #'()       % beamExceptions
+meter-five-episode = \overrideTimeSignatureSettings
+        10/8        % timeSignatureFraction
+        1/8        % baseMomentFraction
+        #'(3 4 3)    % beatStructure
+        #'()       % beamExceptions
+meter-five-two-plus-three = \overrideTimeSignatureSettings
+        5/4        % timeSignatureFraction
+        1/4        % baseMomentFraction
+        #'(2 3)    % beatStructure
+        #'()       % beamExceptions
 
 melody-verse-one = \relative c' {
   \time 7/8
@@ -121,8 +131,8 @@ melody-bridge-two = \relative c' {
 	r4 e8 cis e4 a a
   \time 11/8
 	r4 a8 fis a4 cis cis4.(
-	\time 9/8
-	b4)\)  r4 r4 r4.
+	\time 6/8
+	b4)\)  r8 r4.
 }
 
 melody-bridge-one = \relative c' {
@@ -186,6 +196,16 @@ melody-episode = \relative c' {
   \repeat unfold 2 {
     r2 r4.
   }
+  \time 5/4
+  r4. r2 r4.
+  \time 9/8
+  r4. r2.
+  \time 5/4
+  r4. r2 r4.
+  \time 9/8
+  r4. r2.
+  \time 4/4
+  R1
 }
 
 melody = \relative c' {
@@ -297,6 +317,8 @@ upper-bridge-one = \relative c''' {
   r2 fis,8 d' gis, e' a, fis' cis'
   \time 9/8
   b16 a gis fis e d cis b a gis fis e d cis b a gis fis
+  \time 4/4
+  e4 r r2
 }
 
 lower-bridge-one = \relative c {
@@ -314,11 +336,12 @@ lower-bridge-one = \relative c {
   d,8 a' cis fis~ fis8 cis e d b a b,
   \time 9/8
   e, 8 fis' a d~ d4~ d4.
+  \time 4/4
+  <e, fis a d>1
 }
 
 upper-chorus-one = \relative c' {
-  \time 4/4
-  e4 r r2
+  \meter-nine-four-plus-five
   \time 9/8
   r2 fis'8 e gis e b'
   \time 4/4
@@ -356,9 +379,7 @@ upper-chorus-one = \relative c' {
   \time 9/8
 }
 
-lower-chorus-one = \relative c {
-  \time 4/4
-  <e fis a d>1
+lower-chorus-one = \relative c' {
   \time 9/8
   \clef treble
   a8 e' b' cis~ cis4~ cis4.
@@ -407,6 +428,16 @@ upper-episode = \relative c''' {
   b' a
   \ottava #0
   fis8 f e dis d cis b
+  \time 5/4
+  ais4. eis2 eis'8[ cis eis,]
+  \time 9/8
+  e4. b'4 ais gis
+  \time 5/4
+  <d fis>4 d8 fis d b' fis cis' b gis'
+  \time 9/8
+  <fis, c>4. dis8 c' fis, dis' a fis'
+  \time 4/4
+  <eis gis,>2 fis4 gis
 }
 
 lower-episode = \relative c' {
@@ -421,6 +452,18 @@ lower-episode = \relative c' {
   \time 7/8
   dis,8 a' b c fis4.
   eis,8 b' dis eis gis4.
+  \time 5/4
+  fis,,8[ cis' eis] fis[ eis ais eis] bis' eis,4
+  \meter-nine-three-plus-six
+  \time 9/8
+  fis,8 e' gis cis e, b' e, ais e
+  \meter-five-two-plus-three
+  \time 5/4
+  fis,8 b a' b~ b2.
+  \time 9/8
+  d,,8 a' fis'~ fis2.
+  \time 4/4
+  cis,8 b' eis gisis~ gisis2
 
 }
 
@@ -435,10 +478,10 @@ upper-bridge-two = \relative c'' {
   r2 d8 b' e, cis' f, d'
   r2 e,8 cis' fis, d' gis, e'
   \time 11/8
-  r2 fis,8 dis' g, e' a, \ottava #1 fis' cis'
-  \time 9/8
-  b16 a g f fes ees des c
-  bes' aes g f fes \ottava #0 ees des c bes aes
+  r2 fis,8 dis' gis, e' a, fis' \ottava #1 e'
+  \time 6/8
+  ees16 d c bes aes g f ees \ottava #0 d c bes aes
+  \time 4/4
   g4 r4 r2
 }
 
@@ -455,10 +498,11 @@ lower-bridge-two = \relative c {
   cis,,8 b' e gis~ gis2.
   \time 11/8
   c,,8 a' dis fis~ fis2~ fis4.
-  \time 9/8
+  \time 6/8
   b,,8
   \clef treble
-  c' ees aes~ aes4~ aes4.
+  c' ees aes4.
+  \time 4/4
   <d, a' c>2
   \clef bass <gis, d' e>
 }
@@ -476,6 +520,7 @@ upper = \relative c' {
   \upper-chorus-one
   \upper-episode
   \upper-bridge-two
+  \upper-chorus-one
   % \bar "|."
 }
 
@@ -492,6 +537,7 @@ lower = \relative c {
   \lower-chorus-one
   \lower-episode
   \lower-bridge-two
+  \lower-chorus-one
   % \bar "|."
 }
 
