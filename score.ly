@@ -541,6 +541,101 @@ lower = \relative c {
   % \bar "|."
 }
 
+pedals = {
+  % verse one
+  s2..
+  s1\sustainOn
+  s1
+  s1\sustainOff\sustainOn
+  s1
+  s2..\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s2..\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+
+  s1\sustainOn
+  s1
+  s1\sustainOff\sustainOn
+  s1
+  s2..\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s2..\sustainOff\sustainOn
+  s2\sustainOff\sustainOn s4\sustainOff\sustainOn s4.
+
+  % bridge
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s4 s4.
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff
+
+  % chorus
+  s2.\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+
+  % episode
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s2..\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+
+  % bridge
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s2
+  s2.\sustainOff\sustainOn s4 s4.
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+
+  % chorus
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s1\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff\sustainOn
+  s2.\sustainOff\sustainOn s4.
+  s2.\sustainOff\sustainOn s4.
+
+}
+
 dynamics = {
 }
 
@@ -582,10 +677,7 @@ lyricsmain = \lyricmode {
 \score {
   <<
     \new Staff = "melodystaff" <<
-      \set Staff.midiInstrument = #"electric guitar (clean)"
       \set Staff.instrumentName = #"Vocal"
-      \set Staff.midiMinimumVolume = #0.9
-      \set Staff.midiMaximumVolume = #1
       \new Voice = "melody" {
         \melody
       }
@@ -594,17 +686,13 @@ lyricsmain = \lyricmode {
     \new PianoStaff <<
       \set PianoStaff.instrumentName = #"Piano"
       \new Staff = "right" {
-        \set Staff.midiInstrument = #"acoustic grand"
-        \set Staff.midiMinimumVolume = #0.6
-        \set Staff.midiMaximumVolume = #0.7
         \upper
+        % \articulate << \upper \pedals >>
       }
       \new Dynamics = "Dynamics_pf" \dynamics
       \new Staff = "left" {
-        \set Staff.midiInstrument = #"acoustic grand"
-        \set Staff.midiMinimumVolume = #0.6
-        \set Staff.midiMaximumVolume = #0.7
         \lower
+        % \articulate << \lower \pedals >>
       }
     >>
   >>
@@ -629,6 +717,39 @@ lyricsmain = \lyricmode {
       \override ChordName #'font-size = #-3
     }
   }
+}
+
+\score {
+  <<
+    \new Staff = "melodystaff" <<
+      \set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.instrumentName = #"Vocal"
+      \set Staff.midiMinimumVolume = #0.9
+      \set Staff.midiMaximumVolume = #1
+      \new Voice = "melody" {
+        \melody
+      }
+      \context Lyrics = "lyrics" { \lyricsto "melody" { \lyricsmain } }
+    >>
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = #"Piano"
+      \new Staff = "right" {
+        \set Staff.midiInstrument = #"acoustic grand"
+        \set Staff.midiMinimumVolume = #0.6
+        \set Staff.midiMaximumVolume = #0.7
+        % \upper
+        \articulate << \upper \pedals >>
+      }
+      \new Dynamics = "Dynamics_pf" \dynamics
+      \new Staff = "left" {
+        \set Staff.midiInstrument = #"acoustic grand"
+        \set Staff.midiMinimumVolume = #0.6
+        \set Staff.midiMaximumVolume = #0.7
+        % \lower
+        \articulate << \lower \pedals >>
+      }
+    >>
+  >>
   \midi {
     \context {
       \ChordNameVoice \remove Note_performer
