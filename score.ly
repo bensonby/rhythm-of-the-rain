@@ -371,9 +371,9 @@ upper-bridge-one = \relative c''' {
   d4 r d,8 b' e, cis' fis, d'
   r2 e,8 cis' fis, d' gis, e'
   \time 11/8
-  r2 fis,8 d' gis, e' a, fis' cis'
+  r2 fis,8 d' gis, e' a, \ottava #1 fis' cis'
   \time 9/8
-  b16 a gis fis e d cis b a gis fis e d cis b a gis fis
+  b16 a gis fis \ottava #0 e d cis b a gis fis e d cis b a gis fis
   \time 4/4
   e4 r r2
 }
@@ -382,10 +382,10 @@ lower-bridge-one = \relative c {
   \time 9/8
   fis8 cis' gis' b~ b4~ b4.
   \clef bass
-  eis,,8 cis' gis' b~ b4 b4.
-  e,,8 cis' gis' b~ b4 b4.
+  eis,,8 \clef treble cis' gis' b~ b4 b4.
+  \clef bass e,,8 \clef treble cis' gis' b~ b4 b4.
   \time 4/4
-  dis,,8 a' cis fis a2
+  \clef bass dis,,8 a' cis fis a2
   \time 5/4
   b,,8 a' d fis~ fis2 e8 b
   cis,8 a' e' gis~ gis4. fis8 e b
@@ -412,9 +412,9 @@ upper-chorus-one = \relative c' {
   \time 4/4
   cis8 e, b' e, a b, fis' b,
   \time 7/8
-  e4 d'8 e, cis' a a'
+  e4 d'8 e, cis' a \ottava #1 a'
   \time 4/4
-  gis2 r2
+  gis2 \ottava #0 r2
   \time 9/8
   r2 fis,8 e gis e b'
   \time 4/4
@@ -483,12 +483,11 @@ upper-episode = \relative c''' {
   c2 dis8
   \ottava #1
   b' a
-  \ottava #0
-  fis8 f e dis d cis b
+  fis8 f \ottava #0 e dis d cis b
   \time 5/4
   ais4. eis2 eis'8[ cis eis,]
   \time 9/8
-  e4. b'4 ais gis
+  e?4. b'4 ais gis
   \time 5/4
   <d fis>4 d8 fis d b' fis cis' b gis'
   \time 9/8
@@ -513,12 +512,12 @@ lower-episode = \relative c' {
   fis,,8[ cis' eis] fis[ eis ais eis] bis' eis,4
   \meter-nine-three-plus-six
   \time 9/8
-  fis,8 e' gis cis e, b' e, ais e
+  fis,8 e'? gis cis e, b' e, ais e
   \meter-five-two-plus-three
   \time 5/4
   fis,8 b a' b~ b2.
   \time 9/8
-  d,,8 a' fis'~ fis2.
+  \clef bass d,,8 a' fis'~ fis2.
   \time 4/4
   cis,8 b' eis gisis~ gisis2
 
