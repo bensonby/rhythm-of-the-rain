@@ -80,9 +80,28 @@ meter-five-two-plus-three = \overrideTimeSignatureSettings
         #'(2 3)    % beatStructure
         #'()       % beamExceptions
 
-melody-verse-one = \relative c' {
+melody-intro = \relative c {
+  \time 9/8
+  r2 r4 r4.
+  \time 4/4
+  R1
   \time 7/8
-	r2 r4
+  R2..
+  R2..
+  \time 9/8
+  r2 r4 r4.
+
+  r2 r4 r4.
+  \time 4/4
+  R1
+  \time 7/8
+  R2..
+  R2..
+}
+
+melody-verse-one = \relative c' {
+  \time 4/4
+	r2 r4 r8
 	a8\(
 	\time 9/8
   % \time #'(4 2 3) 9/8
@@ -92,9 +111,9 @@ melody-verse-one = \relative c' {
 	\time 9/8
 	b8 b b a b4 e a,8\)
 	\time 4/4
-	r2 r8 e'4\( cis8
+	r2 r8 e'4\( cis8\)
 	\time 7/8
-	r2 fis4 b,8~
+	r2 fis4\( b,8~
 	\time 9/8
 	b8 cis4 a8~ a4 cis fis,8
 	\time 7/8
@@ -131,8 +150,8 @@ melody-bridge-two = \relative c' {
 	r4 e8 cis e4 a a
   \time 11/8
 	r4 a8 fis a4 cis cis4.(
-	\time 6/8
-	b4)\)  r8 r4.
+	\time 4/4
+	b4)\)  r4 r2
 }
 
 melody-bridge-one = \relative c' {
@@ -149,10 +168,10 @@ melody-bridge-one = \relative c' {
 	r4 a8 fis a4 cis cis4.(
 	\time 9/8
 	b4)\)  r4 r4 r4.
+	\time 4/4
 }
 
 melody-chorus-one = \relative c'' {
-	\time 4/4
 	r4 r8 b\( b a gis a~
 	\time 9/8
 	a4 cis,8 e~ e b'4 b\)
@@ -215,6 +234,7 @@ melody = \relative c' {
 	\key a \major
 	\time 7/8
   \tempo 4 = 92
+  \melody-intro
   \melody-verse-one
   \melody-bridge-one
   \melody-chorus-one
@@ -223,10 +243,50 @@ melody = \relative c' {
   \melody-chorus-one
 }
 
-upper-verse-one = \relative c' {
+upper-intro = \relative c''' {
+  \time 9/8
+  <a cis,>2 gis4~ gis g8~ 
+  \time 4/4
+  g1
   \time 7/8
-  R2..
+  fis2~ fis4.
+  f2~ f4.
+  \time 9/8
+  dis2~ dis4. g8 gis
 
+  <a cis,>2 gis4~ gis g8~ 
+  \time 4/4
+  g1
+  \time 7/8
+  fis2~ fis4.
+  f2 b,8 cis d~
+  \time 4/4
+  <e d gis,>1
+}
+
+lower-intro = \relative c' {
+  \clef treble
+  \time 9/8
+  a8 e' fis gis b e, cis' e, e'
+  \time 4/4
+  cis8 b a g e g a b
+  \time 7/8
+  cis8 b a g e d b
+  a8 b f' a f a b
+  \time 9/8
+  a,8 dis fis a b dis fis4.
+
+  a,,8 e' fis gis b e, cis' e, e'
+  \time 4/4
+  cis8 b a g e g a b
+  \time 7/8
+  cis8 b a g e d b
+  a8 b f' a~ a4.
+  \time 4/4
+  e1
+}
+
+upper-verse-one = \relative c' {
   \time 9/8
   r2. r4.
   \time 7/8
@@ -264,9 +324,6 @@ upper-verse-one-b = \relative c'' {
 }
 
 lower-verse-one = \relative c' {
-  \time 7/8
-  R2..
-
   \time 9/8
   a8 e' a b cis e b cis e
   \time 7/8
@@ -479,9 +536,8 @@ upper-bridge-two = \relative c'' {
   r2 e,8 cis' fis, d' gis, e'
   \time 11/8
   r2 fis,8 dis' gis, e' a, fis' \ottava #1 e'
-  \time 6/8
-  ees16 d c bes aes g f ees \ottava #0 d c bes aes
   \time 4/4
+  ees16 d c bes aes g c bes aes g f ees \ottava #0 d c bes aes
   g4 r4 r2
 }
 
@@ -498,12 +554,11 @@ lower-bridge-two = \relative c {
   cis,,8 b' e gis~ gis2.
   \time 11/8
   c,,8 a' dis fis~ fis2~ fis4.
-  \time 6/8
+  \time 4/4
   b,,8
   \clef treble
-  c' ees aes4.
-  \time 4/4
-  <d, a' c>2
+  c' ees aes~ aes2
+  <d, a' c>2\arpeggio
   \clef bass <gis, d' e>
 }
 
@@ -514,6 +569,7 @@ upper = \relative c' {
   \clef treble
   \tempo 4 = 92
   \key a \major
+  \upper-intro
   \upper-verse-one
   \upper-verse-one-b
   \upper-bridge-one
@@ -531,6 +587,7 @@ lower = \relative c {
   \clef treble
   \time 7/8
   \key a \major
+  \lower-intro
   \lower-verse-one
   \lower-verse-one-b
   \lower-bridge-one
@@ -767,14 +824,14 @@ lyricsmain = \lyricmode {
         \set Staff.midiInstrument = #"acoustic grand"
         \set Staff.midiMinimumVolume = #0.3
         \set Staff.midiMaximumVolume = #0.7
-        \upper
+        \articulate << \upper \pedals >>
       }
       \new Dynamics = "Dynamics_pf" \dynamics
       \new Staff = "left" {
         \set Staff.midiInstrument = #"acoustic grand"
         \set Staff.midiMinimumVolume = #0.3
         \set Staff.midiMaximumVolume = #0.7
-        \lower
+        \articulate << \lower \pedals >>
       }
     >>
   >>
