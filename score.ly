@@ -454,7 +454,7 @@ lower-chorus-one = \relative c' {
   \time 7/8
   b,8\( fis' a d~\) d4.
   \time 4/4
-  e8\( d a fis e b a e\)
+  e8\( d a fis e d b gis\)
   \time 9/8
   a8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
@@ -524,9 +524,10 @@ lower-episode = \relative c' {
 
 }
 
-upper-bridge-two = \relative c'' {
+upper-bridge-two = \relative c'''' {
   \time 9/8
-  a8\( <e b' e>4.~\) q4~ q4.
+  \ottava #1
+  cis8 \ottava #0 <b,, e>4.~ q4~ q4.
   a8\( <eis b' e>4.~\) q4~ q4.
   a8\( <fis gis e'>4.~\) q4~ q4.
   \time 4/4
@@ -544,14 +545,14 @@ upper-bridge-two = \relative c'' {
 lower-bridge-two = \relative c {
   \clef bass
   \time 9/8
-  fis8~ <fis gis'>4.~ q4~ q4.
+  <fis a'>8~ <fis e' gis>4.~ q4~ q4.
   eis8~ <eis cis'>4.~ q4~ q4.
   e8~ <e cis'>4.~ q4~ q4.
   \time 4/4
   dis8~ <dis cis'>4.~ q2
   \time 5/4
   d8\( b' f' a~\) a2.
-  cis,,8\( b' e gis~\) gis2.
+  cis,,8\( a' e' gis~\) gis2.
   \time 11/8
   c,,8\( a' dis fis~\) fis2~ fis4.
   \time 4/4
