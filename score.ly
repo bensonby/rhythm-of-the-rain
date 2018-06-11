@@ -227,6 +227,15 @@ melody-episode = \relative c' {
   R1
 }
 
+melody-outro = \relative c {
+  \time 7/8
+  R2..
+  R2..
+  R2..
+  \time 4/4
+  R1
+}
+
 melody = \relative c' {
   \meter-nine-four-plus-five
   \meter-seven-four-plus-three
@@ -241,6 +250,8 @@ melody = \relative c' {
   \melody-episode
   \melody-bridge-two
   \melody-chorus-one
+  \melody-outro
+  \bar "|."
 }
 
 upper-intro = \relative c''' {
@@ -563,6 +574,99 @@ lower-bridge-two = \relative c {
   \clef bass <gis, d' e>
 }
 
+upper-chorus-two = \relative c' {
+  \meter-nine-four-plus-five
+  \time 9/8
+  r2 fis'8\( e gis e b'
+  \time 4/4
+  e,2\) a4\( gis
+  \time 9/8
+  e2\) gis8\( e a e cis'
+  \time 4/4
+  e2\) fis4\( gis
+  \time 7/8
+  a4\) e8\( a, d a cis~
+  \time 4/4
+  cis8 e, b' e, a b, fis' b,
+  \time 7/8
+  e4\) fis'8\( a, e' a, \ottava #1 cis'
+  \time 4/4
+  b2\) \ottava #0 r2
+  \time 9/8
+  r2 fis,8\( e gis e b'
+  \time 4/4
+  e,2\) a4\( gis
+  \time 9/8
+  e2\) gis8\( e a e cis'
+  \time 4/4
+  e2\) fis4\( gis
+  \time 7/8
+  a4\) e8\( a, d a cis~
+  \time 4/4
+  cis8 e, b' e, a b, fis' b,
+  \time 9/8
+  e2\) cis'8\( e, e' e, cis'
+  \meter-nine-three-plus-six
+  \time 9/8
+  d4.\) d,8\( e fis gis a b\)
+  \meter-nine-four-plus-five
+  \time 9/8
+}
+
+lower-chorus-two = \relative c' {
+  \time 9/8
+  \clef treble
+  a8\( e' b' cis~\) cis4~ cis4.
+  \time 4/4
+  cis,8\( e b' cis~\) cis2
+  \time 9/8
+  fis,,8\(  e' a b~\) b4~ b4.
+  \time 4/4
+  cis,8\( e gis b~\) b4 c,
+  \time 7/8
+  b8\( fis' a d~\) d4.
+  \time 4/4
+  bes,8\( d e a~\) a2
+  \time 7/8
+  a,8\( d fis b~\) b4.
+  \time 4/4
+  gis,8\( fis' b d <e a b>2\arpeggio\)
+  \time 9/8
+  a,,8\( e' b' cis~\) cis4~ cis4.
+  \time 4/4
+  cis,8\( e b' cis~\) cis2
+  \time 9/8
+  fis,,8\( e' a b~\) b4~ b4.
+  \time 4/4
+  cis,8\( e gis b~\) b4 c,
+  \time 7/8
+  b8\( fis' a d~\) d4.
+  \time 4/4
+  bes,8\( d e a~\) a2
+  \time 9/8
+  a,8\( d fis b~\) b4~ b4.
+  <gis, f' b>4.~ <gis e' b'>2.
+}
+
+upper-outro = \relative c''' {
+  \time 7/8
+  cis2 e4 cis8~
+  cis4 fis4 e a,8~
+  a2 fis4.
+  \time 4/4
+  <gis dis b>1\arpeggio
+}
+
+lower-outro = \relative c {
+  \clef bass
+  \time 7/8
+  a8 a' b gis' a, b g'
+  a, b cis fis a, b f'
+  a, b dis fis a gis fis
+  \time 4/4
+  e1
+}
+
 upper = \relative c' {
   \meter-nine-four-plus-five
   \meter-seven-four-plus-three
@@ -577,8 +681,9 @@ upper = \relative c' {
   \upper-chorus-one
   \upper-episode
   \upper-bridge-two
-  \upper-chorus-one
-  % \bar "|."
+  \upper-chorus-two
+  \upper-outro
+  \bar "|."
 }
 
 lower = \relative c {
@@ -595,8 +700,9 @@ lower = \relative c {
   \lower-chorus-one
   \lower-episode
   \lower-bridge-two
-  \lower-chorus-one
-  % \bar "|."
+  \lower-chorus-two
+  \lower-outro
+  \bar "|."
 }
 
 pedals = {
@@ -692,6 +798,11 @@ pedals = {
   s2.\sustainOff\sustainOn s4.
   s2.\sustainOff\sustainOn s4.
 
+  % outro
+  s2..\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s2..\sustainOff\sustainOn
+  s1\sustainOff
 }
 
 dynamics = {
