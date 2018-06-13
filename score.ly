@@ -394,8 +394,8 @@ lower-bridge-one = \relative c {
   \clef bass
   fis8\( \clef treble cis' gis' b~\) b4~ b4.
   \clef bass
-  eis,,8\( \clef treble cis' gis' b~\) b4 b4.
-  \clef bass e,,8\( \clef treble cis' gis' b~\) b4 b4.
+  eis,,8\( \clef treble cis' gis' b~\) b4~ b4.
+  \clef bass e,,8\( \clef treble cis' gis' b~\) b4~ b4.
   \time 4/4
   \clef bass dis,,8\( a' cis fis a2\)
   \time 5/4
@@ -465,7 +465,7 @@ lower-chorus-one = \relative c' {
   \time 7/8
   b,8\( fis' a d~\) d4.
   \time 4/4
-  e8\( d a fis e d b gis\)
+  e8\( d b a fis e d b\)
   \time 9/8
   a8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
@@ -893,8 +893,8 @@ lyricsmain = \lyricmode {
     \new Staff = "melodystaff" <<
       \set Staff.midiInstrument = #"electric guitar (clean)"
       \set Staff.instrumentName = #"Vocal"
-      \set Staff.midiMinimumVolume = #0.9
-      \set Staff.midiMaximumVolume = #1
+      \set Staff.midiMinimumVolume = #0.6
+      \set Staff.midiMaximumVolume = #0.7
       \new Voice = "melody" {
         \melody
       }
