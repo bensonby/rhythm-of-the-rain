@@ -589,11 +589,11 @@ upper-chorus-two = \relative c' {
   \time 4/4
   cis8 e, b' e, a b, fis' b,
   \time 7/8
-  e4\) fis'8\( a, e' a, \ottava #1 cis'
+  e4\) d'8\( e, cis' a fis\)
   \time 4/4
-  b2\) \ottava #0 r2
+  b4 gis' fis8\( f \tuplet 3/2 4 { e ees d }
   \time 9/8
-  r2 fis,8\( e gis e b'
+  cis2\) fis,8\( e gis e b'
   \time 4/4
   e,2\) a4\( gis
   \time 9/8
@@ -630,9 +630,9 @@ lower-chorus-two = \relative c' {
   \time 7/8
   a,8\( d fis b~\) b4.
   \time 4/4
-  gis,8\( fis' b d <e a b>2\arpeggio\)
+  gis,8\( fis' b d~\) d2
   \time 9/8
-  a,,8\( e' b' cis~\) cis4~ cis4.
+  a,8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
   cis,8\( e b' cis~\) cis2
   \time 9/8
@@ -652,7 +652,7 @@ upper-outro = \relative c''' {
   \time 7/8
   cis2 e4 cis8~
   cis4 fis4 e a,8~
-  a2 fis4.
+  a2 c8 b a
   \time 4/4
   <gis dis b>1\arpeggio
 }
@@ -660,9 +660,9 @@ upper-outro = \relative c''' {
 lower-outro = \relative c {
   \clef bass
   \time 7/8
-  a8 a' b gis' a, b g'
+  a8 \clef treble a' b gis' a, b g'
   a, b cis fis a, b f'
-  a, b dis fis a gis fis
+  a, b dis fis? a gis fis
   \time 4/4
   e1
 }
