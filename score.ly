@@ -426,9 +426,9 @@ upper-chorus-one = \relative c' {
   \time 7/8
   e4\) d'8\( e, cis' a \ottava #1 a'
   \time 4/4
-  gis2\) \ottava #0 r2
+  gis2~\) gis8 fis\( e d \ottava #0
   \time 9/8
-  r2 fis,8\( e gis e b'
+  cis2\) fis,8\( e gis e b'
   \time 4/4
   e,2\) a4\( gis
   \time 9/8
@@ -465,9 +465,9 @@ lower-chorus-one = \relative c' {
   \time 7/8
   b,8\( fis' a d~\) d4.
   \time 4/4
-  e8\( d b a fis e d b\)
+  e8\( d a fis e2\)
   \time 9/8
-  a8\( e' b' cis~\) cis4~ cis4.
+  a,8\( e' b' cis~\) cis4~ cis4.
   \time 4/4
   cis,8\( e b' cis~\) cis2
   \time 9/8
