@@ -127,13 +127,13 @@ melody-verse-one = \relative c' {
 	\time 9/8
 	b8 b b a b4 e a,8\)
 	\time 4/4
-	r2 r8 e'4\( cis8
+	r2 r8 e'4\( cis8\)
 	\time 7/8
-	r2 fis4 b,8~
+	r2 fis4\( b,8~
 	\time 9/8
-	b8 cis4 a8~ a4 cis fis,8
+	b8 cis4 a8~ a4 cis fis,8\)
 	\time 7/8
-	r2 fis8 a e'~
+	r2 fis8\( a e'~
 	\time 9/8
 	e8 cis b a e'4 gis, a8\)
 }
@@ -146,10 +146,10 @@ melody-bridge-two = \relative c' {
 	\time 4/4
 	r2 r4 a8\( gis
 	\time 5/4
-	a4 d,8 cis d4 a' a
-	r4 e8 cis e4 a a
+	a4 d,8 cis d4 a' a\)
+	r4 e8\( cis e4 a a\)
   \time 11/8
-	r4 a8 fis a4 cis cis4.(
+	r4 a8\( fis a4 cis cis4.(
 	\time 4/4
 	b4)\)  r4 r2
 }
@@ -162,10 +162,10 @@ melody-bridge-one = \relative c' {
 	\time 4/4
 	r2 r4 fis8\( gis
 	\time 5/4
-	a4 d,8 cis d4 a' a
-	r4 e8 cis e4 a a
+	a4 d,8 cis d4 a' a\)
+	r4 e8\( cis e4 a a\)
 	\time 11/8
-	r4 a8 fis a4 cis cis4.(
+	r4 a8\( fis a4 cis cis4.(
 	\time 9/8
 	b4)\)  r4 r4 r4.
 	\time 4/4
@@ -203,7 +203,7 @@ melody-chorus-one = \relative c'' {
 	r4 r8 a\( a b a cis~
 	\time 9/8
 	cis2 fis,4 cis' b8\)
-	r4 gis8 gis4 a a
+	r4 gis8\( gis4 a a\)
 }
 
 melody-episode = \relative c' {
@@ -237,6 +237,7 @@ melody-outro = \relative c {
 }
 
 melody = \relative c' {
+  \phrasingSlurUp
   \meter-nine-four-plus-five
   \meter-seven-four-plus-three
   \meter-eleven-four-plus-three
@@ -368,7 +369,7 @@ lower-verse-one-b = \relative c' {
   \time 7/8
   b8\( a' cis d fis cis d\)
   \time 9/8
-  e,8\( fis a d e gis, b d, \clef bass eis,\)
+  e,8\( fis a d e gis, b d, eis,\)
 }
 
 upper-bridge-one = \relative c''' {
@@ -391,8 +392,7 @@ upper-bridge-one = \relative c''' {
 
 lower-bridge-one = \relative c {
   \time 9/8
-  \clef bass
-  fis8\( \clef treble cis' gis' b~\) b4~ b4.
+  fis8\( cis' gis' b~\) b4~ b4.
   \clef bass
   eis,,8\( \clef treble cis' gis' b~\) b4~ b4.
   \clef bass e,,8\( \clef treble cis' gis' b~\) b4~ b4.
@@ -650,11 +650,11 @@ lower-chorus-two = \relative c' {
 
 upper-outro = \relative c''' {
   \time 7/8
-  cis2 e4 cis8~
+  cis2\( e4 cis8~
   cis4 fis4 e a,8~
-  a2 c8 b a
+  a2\) c8\( b a
   \time 4/4
-  <gis dis b>1\arpeggio
+  <gis dis b>1\arpeggio\)
 }
 
 lower-outro = \relative c {
